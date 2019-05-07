@@ -3,37 +3,26 @@ html{
 }
 
 body{
-	margin:0px; background:#EEEDED; height:100%;
+	margin:0px; background: #EEEDED; height:100%;
 }
 
 #navbar{
-	height:40px; padding:15px 0px; background:#333; border-bottom: 5px solid #a1a7ad;
+	display:grid;
+	grid-template-columns:20% 55% 25%;
+	height:55px;
+	padding:5px 0px;
+	background:#333;
+	border-bottom:5px solid #a1a7ad;
 }
 
 #navbarlogo{
-	position:relative;
-	float:left;
-}
-
-#titlebar{
-	position:absolute;
-	width:100%;
-}
-
-#titlebar p{
-	text-align:center;
-	color:white;
-	font-weight:bold;
-	font-family:sans-serif;
+	justify-items:left;
 }
 
 #navbarlist li{
-	display:inline; 
-	list-style:none; 
-	padding-right:10px;
-       	padding-left:15px;
-	float:right;
-	position:relative;
+	list-style:none;
+	padding-right:0.1em;
+	padding-left:0.1em;
 	font-family:sans-serif;
 	font-weight:bold;
 	color:#999;
@@ -51,23 +40,42 @@ body{
 	color:white;
 }
 
+#titlebar p{
+	text-align:center;
+	font-weight:bold;
+	font-family:sans-serif;
+	color:#999;
+}
+
+#navbarlist li{
+	display:inline;
+}
+
+#main{
+	display:grid;
+	height:80%;
+	grid-template-columns:10% 90%;
+}
+
 #navpanel{
-	position:absolute;
-	top:80px;
-	width:10em;
-	left:0;
 }
 
 .header{
-	font-size:0.85em; padding:0.5em 0; text-decoration:underline;
+	font-size:0.85em;
+	padding:0.5em 0;
+	text-decoration:underline;
 }
 
 #navpanel ul{
-	list-style:none; margin:0;
+	list-style:none;
+	padding-left:1em;
+	margin:0;
 }
 
 #navpanel li{
-	line-height:1.125em; font-size:0.75em; margin:0; padding:0.25em 0;
+	line-height:1.6em;
+	font-size:0.75em;
+	margin:0;
 }
 
 #navpanel a:visited{
@@ -75,31 +83,33 @@ body{
 }
 
 #mainhead{
-	top:-79px; position:relative;
+	display:grid;
+	grid-template-rows:10% 90%;
+	grid-template-columns:10% 90%;
 }
 
 #lefttab{
-	float:left; margin-left:11em; margin-top:2.5em; margin-bottom:2.5em;
+	display:grid;
+	align-items:end;
+	grid-template-columns:35% 65%;
 }
 
 #lefttab ul{
-	list-style:none; display:inline;
+	list-style:none;
+	margin:0;
+	padding-left:0;
 }
 
 #lefttab li{
-	border: 1px solid #cccccc;
-	border-bottom-color: #ffffff;
-	background-color: #ffffff;
-}
-
-#contentbase{
-	height:65px;
+	border:1px solid #cccccc;
+	border-bottom-color:#ffffff;
+	background-color:#ffffff;
+	text-align:center;
 }
 
 #content{
-	padding:1.25em 1.5em 1.5em 0em;
+	grid-column:1/3;
+	grid-row:2/3;	
 	border:1px solid #cccccc;
-	margin-left:11em;
-	background-color: #ffffff;
-	height:70%;
+	background-color:#ffffff;
 }
